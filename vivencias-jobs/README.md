@@ -1,32 +1,27 @@
-# React + TypeScript + Vite
+# Pedidos disponíveis — marketplace de serviços
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Ecrã onde um profissional consulta pedidos de reparação, filtra por cidade e aceita o trabalho que lhe interessa.
 
-Currently, two official plugins are available:
+## Como correr
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Abre o endereço indicado no terminal (normalmente `http://localhost:5173`).
+
+Outros comandos:
+
+```bash
+npm run build    # verifica TypeScript e gera a versão de produção
+npm run preview  # serve a build localmente
+```
+
+## O que faria a seguir
+
+Se tivesse mais tempo, ligava a lista a uma API real (em vez dos dados em `src/data/jobs.ts`), persistia os pedidos aceites para não voltarem a aparecer ao recarregar a página, e acrescentava confirmação antes de aceitar um pedido urgente.
+
+## Stack
+
+React, TypeScript, Vite e CSS puro. Sem servidor nem base de dados — os dados estão no código, como pedido no exercício.
